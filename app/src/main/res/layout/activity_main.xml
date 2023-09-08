@@ -4,46 +4,158 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:text="Button"
+<!--    <Button-->
+<!--        android:id="@+id/PlusButton"-->
+<!--        style="@style/OpButtons"-->
+<!--        android:text="+"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        tools:layout_editor_absoluteY="247dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/MinusButton"-->
+<!--        style="@style/OpButtons"-->
+<!--        android:text="-"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        tools:layout_editor_absoluteY="304dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/MultiplyButton"-->
+<!--        style="@style/OpButtons"-->
+<!--        android:text="*"-->
+<!--        tools:layout_editor_absoluteX="289dp"-->
+<!--        tools:layout_editor_absoluteY="352dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/DivideButton"-->
+<!--        style="@style/OpButtons"-->
+<!--        android:text="/"-->
+<!--        tools:layout_editor_absoluteX="289dp"-->
+<!--        tools:layout_editor_absoluteY="400dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/ClearButton"-->
+<!--        style="@style/ClearButton"-->
+<!--        android:text="AC"-->
+<!--        tools:layout_editor_absoluteX="23dp"-->
+<!--        tools:layout_editor_absoluteY="465dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button1"-->
+<!--        style="@style/NumberButtons"-->
+<!--        android:text="1"-->
+<!--        tools:layout_editor_absoluteX="3dp"-->
+<!--        tools:layout_editor_absoluteY="247dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button2"-->
+<!--        style="@style/NumberButtons"-->
+<!--        android:text="2"-->
+<!--        tools:layout_editor_absoluteX="104dp"-->
+<!--        tools:layout_editor_absoluteY="247dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button3"-->
+<!--        style="@style/NumberButtons"-->
+<!--        android:text="3"-->
+<!--        tools:layout_editor_absoluteX="199dp"-->
+<!--        tools:layout_editor_absoluteY="247dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button4"-->
+<!--        style="@style/NumberButtons"-->
+<!--        android:text="4"-->
+<!--        tools:layout_editor_absoluteX="23dp"-->
+<!--        tools:layout_editor_absoluteY="329dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button5"-->
+<!--        style="@style/NumberButtons"-->
+<!--        android:text="5"-->
+<!--        tools:layout_editor_absoluteX="113dp"-->
+<!--        tools:layout_editor_absoluteY="329dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button6"-->
+<!--        style="@style/NumberButtons"-->
+<!--        android:text="6"-->
+<!--        tools:layout_editor_absoluteX="192dp"-->
+<!--        tools:layout_editor_absoluteY="329dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button7"-->
+<!--        style="@style/NumberButtons"-->
+<!--        android:text="7"-->
+<!--        tools:layout_editor_absoluteX="16dp"-->
+<!--        tools:layout_editor_absoluteY="388dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button8"-->
+<!--        style="@style/NumberButtons"-->
+<!--        android:text="8"-->
+<!--        tools:layout_editor_absoluteX="104dp"-->
+<!--        tools:layout_editor_absoluteY="388dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button9"-->
+<!--        style="@style/NumberButtons"-->
+<!--        android:text="9"-->
+<!--        tools:layout_editor_absoluteX="192dp"-->
+<!--        tools:layout_editor_absoluteY="386dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button0"-->
+<!--        style="@style/NumberButtons"-->
+<!--        android:text="0"-->
+<!--        tools:layout_editor_absoluteX="174dp"-->
+<!--        tools:layout_editor_absoluteY="465dp" />-->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="297dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="378dp" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="285dp"
-        tools:layout_editor_absoluteY="426dp" />
+            <Button
+                android:id="@+id/button1"
+                style="@style/NumberButtons"
+                android:text="1" />
 
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="287dp"
-        tools:layout_editor_absoluteY="478dp" />
+            <Button
+                android:id="@+id/button2"
+                style="@style/NumberButtons"
+                android:text="2" />
 
-    <Button
-        android:id="@+id/ClearButton"
-        style="@style/ClearButton"
-        android:text="AC"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="485dp" />
+            <Button
+                android:id="@+id/button3"
+                style="@style/NumberButtons"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/PlusButton"
+                style="@style/OpButtons"
+                android:text="+" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
