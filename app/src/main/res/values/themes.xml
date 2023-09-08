@@ -33,11 +33,15 @@
         <item name="android:backgroundTint">@color/md_theme_dark_tertiary</item>
         <item name="android:layout_width">@dimen/NumButtonW</item>
         <item name="android:layout_height">@dimen/NumButtonH</item>
+        <item name="android:padding">@dimen/ButtonPadding</item>
+        <item name="android:layout_margin">@dimen/ButtonMargin</item>
     </style>
 
     <style name="ClearButton" parent="Widget.Material3.Button">
         <item name="android:backgroundTint">@color/md_theme_light_inversePrimary</item>
         <item name="android:layout_width">@dimen/OpButtonW</item>
         <item name="android:layout_height">@dimen/OpButtonH</item>
+        <item name="android:padding">@dimen/ButtonPadding</item>
+        <item name="android:layout_margin">@dimen/ButtonMargin</item>
     </style>
 </resources>
