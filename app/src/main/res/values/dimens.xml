@@ -8,4 +8,6 @@
     <dimen name="OpButtonW">120</dimen>
     <dimen name="ButtonPadding">20dp</dimen>
     <dimen name="ButtonMargin">4dp</dimen>
+    <dimen name="InputSize">50sp</dimen>
+    <dimen name="ResultSize">60sp</dimen>
 </resources>
