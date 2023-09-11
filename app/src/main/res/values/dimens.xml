@@ -4,8 +4,8 @@
     <dimen name="NumButtonW">70dp</dimen>
     <dimen name="ClearButtonH">70dp</dimen>
     <dimen name="ClearButtonW">140dp</dimen>
-    <dimen name="OpButtonH">70</dimen>
-    <dimen name="OpButtonW">120</dimen>
+    <dimen name="OpButtonH">70dp</dimen>
+    <dimen name="OpButtonW">120dp</dimen>
     <dimen name="ButtonPadding">20dp</dimen>
     <dimen name="ButtonMargin">4dp</dimen>
     <dimen name="InputSize">50sp</dimen>

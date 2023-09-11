@@ -10,7 +10,6 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="700dp"
-
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
