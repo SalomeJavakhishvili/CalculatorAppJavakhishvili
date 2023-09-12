@@ -4,56 +4,84 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int numInput;
+    TextView inputBox;
+    String input = "";
+    TextView resultBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTVs();
 
 
     }
 
-    public static void main(String[] args) {
-
-
-
-
+    private void setTVs() {
+        inputBox = (TextView)findViewById(R.id.calcInput);
+        resultBox = (TextView)findViewById(R.id.calcResults);
     }
-    public void numSelected(View v){
 
+    private void setInput(String n) {
+        input = input + n;
+    }
+
+    public void buttonOnClick(View v){
         if(v.getId() == R.id.button1){
-            numInput = 1;
+            setInput("1");
         }
         else if(v.getId() == R.id.button2){
-            numInput = 2;
+            setInput("2");
         }
-        else(v.getId() == R.id.button3){
-            numInput = 3;
+        else if(v.getId() == R.id.button2){
+            setInput("2");
         }
-            else(v.getId() == R.id.button4){
-            numInput = 4;
+        else if(v.getId() == R.id.button3){
+            setInput("3");
         }
-            else(v.getId() == R.id.button5){
-            numInput = 5;
+        else if(v.getId() == R.id.button4){
+            setInput("4");
         }
-            else(v.getId() == R.id.button6){
-            numInput = 6;
+        else if(v.getId() == R.id.button5){
+            setInput("5");
         }
-            else(v.getId() == R.id.button7){
-            numInput = 7;
+        else if(v.getId() == R.id.button6){
+            setInput("6");
         }
-            else(v.getId() == R.id.button8){
-            numInput = 8;
+        else if(v.getId() == R.id.button7){
+            setInput("7");
         }
-            else(v.getId() == R.id.button9){
-            numInput = 9;
+        else if(v.getId() == R.id.button8){
+            setInput("8");
         }
-            else(v.getId() == R.id.button0){
-            numInput = 0;
+        else if(v.getId() == R.id.button9){
+            setInput("9");
+        }
+        else if(v.getId() == R.id.button0){
+            setInput("0");
+        }
+        else if(v.getId() == R.id.plusButton){
+            setInput("+");
+        }
+        else if(v.getId() == R.id.minusButton){
+            setInput("-");
+        }
+        else if(v.getId() == R.id.multiplyButton){
+            setInput("*");
+        }
+        else if(v.getId() == R.id.divideButton){
+            setInput("/");
         }
     }
+
+    public void clearOnClick(View v){
+        input == "";
+        setInput("");
+        setResult("");
+    }
+
 }
