@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -33,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         input = input + n;
     }
 
-    private void setOutput(String n){
-        output = output + n;
-    }
+//    private void setOutput(String n){
+//        output = output + n;
+//    }
 
     public void buttonOnClick(View v){
 
@@ -85,44 +86,45 @@ public class MainActivity extends AppCompatActivity {
             if(input.indexOf("+") != -1){
                 if(input.indexOf("+") < input.length()){
                     num1 = Double.valueOf(input.substring(0,input.indexOf("+")));
-                    num2 = Double.valueOf(input.substring(input.indexOf("+"),input.length()));
-                    answer = num1 + num2;
+                    num2 = Double.valueOf(input.substring(input.indexOf("+")));
+                    answer = num1+num2;
                     input += " = " + output.format(String.valueOf(answer));
                     inputBox.setText(input);
                 }
-                else{
-                    input = "";
-                }
+//                else{
+//                    input = "";
+//                }
             }
             else if(input.indexOf("-") != -1){
                 if(input.indexOf("-") < input.length()){
                     num1 = Double.valueOf(input.substring(0,input.indexOf("-")));
-                    num2 = Double.valueOf(input.substring(input.indexOf("-"),input.length()));
-                    answer = num1 - num2;
+                    num2 = Double.valueOf(input.substring(input.indexOf("-")+1));
+                    answer = num1-num2;
                     input += " = " + output.format(String.valueOf(answer));
                     inputBox.setText(input);
                 }
-                else{
-                    input = "";
-                }
+//                else{
+//                    input = "";
+//                }
             }
             else if(input.indexOf("*") != -1){
+                Log.i("Salome", "Multiply Button clicked");
                 if(input.indexOf("*") < input.length()){
                     num1 = Double.valueOf(input.substring(0,input.indexOf("*")));
-                    num2 = Double.valueOf(input.substring(input.indexOf("*"),input.length()));
-                    answer = num1 * num2;
+                    num2 = Double.valueOf(input.substring(input.indexOf("*")+1));
+                    answer = num1*num2;
                     input += " = " + output.format(String.valueOf(answer));
                     inputBox.setText(input);
                 }
-                else{
-                    input = "";
-                }
+//                else{
+//                    input = "";
+//                }
             }
             else if(input.indexOf("/") != -1){
                 if(input.indexOf("/") < input.length()){
                     num1 = Double.valueOf(input.substring(0,input.indexOf("/")));
-                    num2 = Double.valueOf(input.substring(input.indexOf("/"),input.length()));
-                    answer = num1 / num2;
+                    num2 = Double.valueOf(input.substring(input.indexOf("/")+1));
+                    answer = num1/num2;
                     input += " = " + output.format(String.valueOf(answer));
                     inputBox.setText(input);
                 }
