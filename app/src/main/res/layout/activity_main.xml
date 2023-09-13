@@ -7,6 +7,13 @@
     android:padding="17dp"
     tools:context=".MainActivity">
 
+    <!--I used the video linked below to learn how to implement
+    a TableLayout instead of a ConstraintLayout because the Constraint layout
+    was giving me some trouble with the way I wanted my buttons to look,
+    with a TableLayout which is based on rows and columns, it was much easier
+    to position elements in my layout
+    https://youtu.be/2q7R3Pt-NCw?si=Ms88znjmuaz_n8H-
+    -->
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="700dp"
