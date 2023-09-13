@@ -11,14 +11,17 @@ public class MainActivity extends AppCompatActivity {
     TextView inputBox;
     String input = "";
     TextView resultBox;
+    String output = "";
+    double num1 = 0.0;
+    double num2 = 0.0;
+    double answer = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //instantiate the textViews to be filled later
         setTVs();
-
-
     }
 
     private void setTVs() {
@@ -30,12 +33,14 @@ public class MainActivity extends AppCompatActivity {
         input = input + n;
     }
 
+    private void setOutput(String n){
+        output = output + n;
+    }
+
     public void buttonOnClick(View v){
+
         if(v.getId() == R.id.button1){
             setInput("1");
-        }
-        else if(v.getId() == R.id.button2){
-            setInput("2");
         }
         else if(v.getId() == R.id.button2){
             setInput("2");
@@ -76,12 +81,63 @@ public class MainActivity extends AppCompatActivity {
         else if(v.getId() == R.id.divideButton){
             setInput("/");
         }
+        else if(v.getId() == R.id.enterButton){
+            if(input.indexOf("+") != -1){
+                if(input.indexOf("+") < input.length()){
+                    num1 = Double.valueOf(input.substring(0,input.indexOf("+")));
+                    num2 = Double.valueOf(input.substring(input.indexOf("+"),input.length()));
+                    answer = num1 + num2;
+                    input += " = " + output.format(String.valueOf(answer));
+                    inputBox.setText(input);
+                }
+                else{
+                    input = "";
+                }
+            }
+            else if(input.indexOf("-") != -1){
+                if(input.indexOf("-") < input.length()){
+                    num1 = Double.valueOf(input.substring(0,input.indexOf("-")));
+                    num2 = Double.valueOf(input.substring(input.indexOf("-"),input.length()));
+                    answer = num1 - num2;
+                    input += " = " + output.format(String.valueOf(answer));
+                    inputBox.setText(input);
+                }
+                else{
+                    input = "";
+                }
+            }
+            else if(input.indexOf("*") != -1){
+                if(input.indexOf("*") < input.length()){
+                    num1 = Double.valueOf(input.substring(0,input.indexOf("*")));
+                    num2 = Double.valueOf(input.substring(input.indexOf("*"),input.length()));
+                    answer = num1 * num2;
+                    input += " = " + output.format(String.valueOf(answer));
+                    inputBox.setText(input);
+                }
+                else{
+                    input = "";
+                }
+            }
+            else if(input.indexOf("/") != -1){
+                if(input.indexOf("/") < input.length()){
+                    num1 = Double.valueOf(input.substring(0,input.indexOf("/")));
+                    num2 = Double.valueOf(input.substring(input.indexOf("/"),input.length()));
+                    answer = num1 / num2;
+                    input += " = " + output.format(String.valueOf(answer));
+                    inputBox.setText(input);
+                }
+                else{
+                    input = "";
+                }
+            }
+        }
+        inputBox.setText(input);
     }
 
     public void clearOnClick(View v){
-        input == "";
-        setInput("");
-        setResult("");
+        input = "";
+        inputBox.setText("");
+        resultBox.setText("");
     }
 
 }

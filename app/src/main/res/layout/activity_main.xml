@@ -26,6 +26,7 @@
                 android:layout_marginRight="9dp"
                 android:layout_span="4"
                 android:gravity="end"
+                android:textAlignment="textEnd"
                 android:text="@string/calculatorInput"
                 android:textSize="@dimen/InputSize" />
         </TableRow>
@@ -41,6 +42,7 @@
                 android:layout_marginRight="9dp"
                 android:layout_span="4"
                 android:gravity="end"
+                android:textAlignment="textEnd"
                 android:text="@string/calculatorResults"
                 android:textSize="@dimen/ResultSize" />
         </TableRow>
@@ -53,22 +55,25 @@
                 android:id="@+id/button1"
                 style="@style/NumberButtons"
                 android:text="1"
-                android:onClick="numSelected"/>
+                android:onClick="buttonOnClick"/>
 
             <Button
                 android:id="@+id/button2"
                 style="@style/NumberButtons"
-                android:text="2" />
+                android:text="2"
+                android:onClick="buttonOnClick"/>
 
             <Button
                 android:id="@+id/button3"
                 style="@style/NumberButtons"
-                android:text="3" />
+                android:text="3"
+                android:onClick="buttonOnClick"/>
 
             <Button
                 android:id="@+id/plusButton"
                 style="@style/OpButtons"
-                android:text="+" />
+                android:text="+"
+                android:onClick="buttonOnClick"/>
         </TableRow>
 
         <TableRow
@@ -78,22 +83,26 @@
             <Button
                 android:id="@+id/button4"
                 style="@style/NumberButtons"
-                android:text="4" />
+                android:text="4"
+                android:onClick="buttonOnClick"/>
 
             <Button
                 android:id="@+id/button5"
                 style="@style/NumberButtons"
-                android:text="5" />
+                android:text="5"
+                android:onClick="buttonOnClick"/>
 
             <Button
                 android:id="@+id/button6"
                 style="@style/NumberButtons"
-                android:text="6" />
+                android:text="6"
+                android:onClick="buttonOnClick"/>
 
             <Button
                 android:id="@+id/minusButton"
                 style="@style/OpButtons"
-                android:text="-" />
+                android:text="-"
+                android:onClick="buttonOnClick"/>
         </TableRow>
 
         <TableRow
@@ -103,22 +112,26 @@
             <Button
                 android:id="@+id/button7"
                 style="@style/NumberButtons"
-                android:text="7" />
+                android:text="7"
+                android:onClick="buttonOnClick"/>
 
             <Button
                 android:id="@+id/button8"
                 style="@style/NumberButtons"
-                android:text="8" />
+                android:text="8"
+                android:onClick="buttonOnClick"/>
 
             <Button
                 android:id="@+id/button9"
                 style="@style/NumberButtons"
-                android:text="9" />
+                android:text="9"
+                android:onClick="buttonOnClick"/>
 
             <Button
                 android:id="@+id/multiplyButton"
                 style="@style/OpButtons"
-                android:text="*" />
+                android:text="*"
+                android:onClick="buttonOnClick"/>
         </TableRow>
 
         <TableRow
@@ -129,17 +142,20 @@
                 android:id="@+id/clearButton"
                 style="@style/ClearButton"
                 android:layout_span="2"
-                android:text="AC" />
+                android:text="AC"
+                android:onClick="clearOnClick"/>
 
             <Button
                 android:id="@+id/button0"
                 style="@style/NumberButtons"
-                android:text="0" />
+                android:text="0"
+                android:onClick="buttonOnClick"/>
 
             <Button
                 android:id="@+id/divideButton"
                 style="@style/OpButtons"
-                android:text="/" />
+                android:text="/"
+                android:onClick="buttonOnClick"/>
         </TableRow>
 
         <TableRow
@@ -147,10 +163,11 @@
             android:layout_height="match_parent" >
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/enterButton"
                 style="@style/EnterButton"
                 android:layout_span="4"
-                android:text="ENTER" />
+                android:text="ENTER"
+                android:onClick="buttonOnClick"/>
         </TableRow>
     </TableLayout>
 
