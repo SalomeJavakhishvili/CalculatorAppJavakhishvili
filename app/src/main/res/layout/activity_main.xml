@@ -27,7 +27,6 @@
                 android:layout_span="4"
                 android:gravity="end"
                 android:textAlignment="textEnd"
-                android:text="@string/calculatorInput"
                 android:textSize="@dimen/InputSize" />
         </TableRow>
 
@@ -36,15 +35,14 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:id="@+id/calcResults"
+                android:id="@+id/spacer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="9dp"
                 android:layout_span="4"
                 android:gravity="end"
-                android:textAlignment="textEnd"
-                android:text="@string/calculatorResults"
-                android:textSize="@dimen/ResultSize" />
+                android:text=" "
+                android:textSize="@dimen/spacerSize" />
         </TableRow>
 
         <TableRow
@@ -142,7 +140,6 @@
                 android:id="@+id/clearButton"
                 style="@style/ClearButton"
                 android:layout_span="2"
-                android:text="AC"
                 android:onClick="clearOnClick"/>
 
             <Button
@@ -166,7 +163,6 @@
                 android:id="@+id/enterButton"
                 style="@style/EnterButton"
                 android:layout_span="4"
-                android:text="ENTER"
                 android:onClick="buttonOnClick"/>
         </TableRow>
     </TableLayout>

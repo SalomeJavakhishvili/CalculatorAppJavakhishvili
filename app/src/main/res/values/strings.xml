@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="calculatorResults">Results</string>
-    <string name="calculatorInput">Input</string>
+    <string name="app_name">Calculator App</string>
+    <string name="acButton">AC</string>
+    <string name="enterButton">ENTER</string>
 </resources>

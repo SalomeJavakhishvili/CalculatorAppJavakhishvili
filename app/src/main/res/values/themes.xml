@@ -43,6 +43,7 @@
         <item name="android:layout_height">@dimen/ClearButtonH</item>
         <item name="android:padding">@dimen/ButtonPadding</item>
         <item name="android:layout_margin">@dimen/ButtonMargin</item>
+        <item name="android:text">@string/acButton</item>
     </style>
 
     <style name="EnterButton" parent="Widget.Material3.Button">
@@ -51,6 +52,7 @@
         <item name="android:layout_height">@dimen/ClearButtonH</item>
         <item name="android:padding">@dimen/ButtonPadding</item>
         <item name="android:layout_margin">@dimen/ButtonMargin</item>
+        <item name="android:text">@string/enterButton</item>
     </style>
 
     <style name="OpButtons" parent="Widget.Material3.Button">

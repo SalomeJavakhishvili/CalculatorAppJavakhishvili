@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
 
     TextView inputBox;
     String input = "";
-    TextView resultBox;
     String output = "";
     double num1 = 0.0;
     double num2 = 0.0;
@@ -22,22 +21,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //instantiate the textViews to be filled later
-        setTVs();
+        setTV();
     }
 
-    private void setTVs() {
+    private void setTV() {
         inputBox = (TextView)findViewById(R.id.calcInput);
-        resultBox = (TextView)findViewById(R.id.calcResults);
     }
 
     private void setInput(String n) {
         input = input + n;
     }
 
-//    private void setOutput(String n){
-//        output = output + n;
-//    }
 
+    // I incorporated the method touched on in class that was in the notes
+    // to have multiple buttons call one method
+    // The google doc where the notes were located is linked below
+    // https://docs.google.com/document/d/1RIUmb3jgJADvgss2Dm4-tNKqUcj_FqONM6OAe1c8x3w/edit
     public void buttonOnClick(View v){
 
         if(v.getId() == R.id.button1){
@@ -91,9 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     input += " = " + output.format(String.valueOf(answer));
                     inputBox.setText(input);
                 }
-//                else{
-//                    input = "";
-//                }
+
             }
             else if(input.indexOf("-") != -1){
                 if(input.indexOf("-") < input.length()){
@@ -103,9 +100,7 @@ public class MainActivity extends AppCompatActivity {
                     input += " = " + output.format(String.valueOf(answer));
                     inputBox.setText(input);
                 }
-//                else{
-//                    input = "";
-//                }
+
             }
             else if(input.indexOf("*") != -1){
                 Log.i("Salome", "Multiply Button clicked");
@@ -116,9 +111,7 @@ public class MainActivity extends AppCompatActivity {
                     input += " = " + output.format(String.valueOf(answer));
                     inputBox.setText(input);
                 }
-//                else{
-//                    input = "";
-//                }
+
             }
             else if(input.indexOf("/") != -1){
                 if(input.indexOf("/") < input.length()){
@@ -136,10 +129,13 @@ public class MainActivity extends AppCompatActivity {
         inputBox.setText(input);
     }
 
+    // I had trouble with this method and had to eventually use the video linked below
+    // https://youtu.be/-jOEn3Vv0bM?si=WXCDMcw5xIpPeMIj
+    // This code is setting both my input into the calculator as well as the textview
+    // showing my input to be empty
     public void clearOnClick(View v){
         input = "";
         inputBox.setText("");
-        resultBox.setText("");
     }
 
 }
